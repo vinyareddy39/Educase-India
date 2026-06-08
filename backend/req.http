@@ -1,0 +1,41 @@
+### Home Route
+
+GET http://localhost:5000/
+
+###
+
+### Register User
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Marry Doe",
+  "phoneNumber": "9876543210",
+  "email": "marry@gmail.com",
+  "password": "123456",
+  "companyName": "PopX",
+  "isAgency": true
+}
+
+###
+
+### Login User
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "marry@gmail.com",
+  "password": "123456"
+}
+
+###
+
+### Get Profile
+# Replace YOUR_TOKEN with the token returned from login
+
+GET http://localhost:5000/api/auth/profile
+Authorization: Bearer YOUR_TOKEN
+
+###
